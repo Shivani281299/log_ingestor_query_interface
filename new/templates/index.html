@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Query Interface</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    
+    <h1>Log Query Interface</h1>
+    <form action="/search" method="post">
+        <label for="level">Level:</label>
+        <input type="text" name="level">
+
+        <label for="message">Message:</label>
+        <input type="text" name="message">
+
+        <label for="resource">Resource ID:</label>
+        <input type="text" name="resource">
+
+        <label for="start_time">Start Timestamp:</label>
+        <input type="datetime-local" id="start_time" name="start_time">
+
+        <label for="end_time">End Timestamp:</label>
+        <input type="datetime-local" id="end_time" name="end_time">
+        <!-- Repeat similar input fields for other log fields -->
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
